@@ -14,13 +14,13 @@ int main(void)
     // Spoljašnja petlja za redove
     for (int i = 0; i < n; i++)
     {
-        // Unutrašnja petlja za razmake
+        // Unutrašnja petlja za razmake 
         for (int j = 0; j < n - 1 - i; j++)
         {
             printf(" ");
         }
 
-        // Unutrašnja petlja za tarabe
+        // Unutrašnja petlja za tarabe 
         for (int k = 0; k <= i; k++)
         {  
             printf("#");
