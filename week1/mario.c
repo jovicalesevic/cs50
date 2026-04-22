@@ -4,28 +4,38 @@
 int main(void)
 {
     int n;
-    //Tražimo od korisnika visinu - na primer od 1 do 8
+    // We ask the user for height - for example from 1 to 8
     do
     {
         n = get_int("Height (between 1 and 8): ");
     }
     while (n < 1 || n > 8);
  
-    // Spoljašnja petlja za redove
+    // Outer loop for rows
     for (int i = 0; i < n; i++)
     {
-        // Unutrašnja petlja za razmake 
+        // Inner loop for spaces - LEFT
         for (int j = 0; j < n - 1 - i; j++)
         {
             printf(" ");
         }
 
-        // Unutrašnja petlja za tarabe 
+        // Inner loop for the # - LEFT
         for (int k = 0; k <= i; k++)
         {  
             printf("#");
         }
-            // Prelazak u novi red nakon što se iscrta jedna linija
+
+        // 3. MIDDLE: Two fixed spaces
+        printf("  ");
+
+        // 4. RIGHT SIDE: # (same as on the left!)
+        for (int l = 0; l <= i; l++)
+        {
+            printf("#");
+        }
+
+        // At the end of the floor - a new row
             printf("\n");
     }
 }
